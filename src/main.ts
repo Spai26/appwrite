@@ -1,8 +1,10 @@
 
-process.loadEnvFile();
+/*
+import dotenv from 'dotenv';
+dotenv.config();
+
 import sdk, { Client, Account, Databases, Users, Permission, Role } from "node-appwrite";
 import { WRITE } from "./config/env";
-
 
 const client =new Client();
 
@@ -82,3 +84,7 @@ async function createCollectionIfNotExists() {
 
 
 createCollectionIfNotExists();
+ */
+export default async ({ req, res, log, error }) => {
+    return res.send("hello word");
+}
