@@ -9,7 +9,9 @@
     "build:prod": "tsc -p tsconfig.json && tsc-alias -p tsconfig.json",    
     "start:dev": "npx  ts-node-dev --respawn --ignore-watch node_modules src/main.ts",
     "start:build": "npm i && npm run build:prod",
-    "start:prod": "node build/main.js"
+    "start:prod": "node build/main.js",
+    "build:functions": "npm run build:prod && cp -R ./node_modules ./build && cp package.json ./build"
+
   },
   "keywords": [],
   "author": "",
