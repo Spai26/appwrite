@@ -2,7 +2,7 @@
   "name": "appwrite",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "build/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:clean": "rm -rf ./build",
@@ -10,7 +10,7 @@
     "start:dev": "npx  ts-node-dev --respawn --ignore-watch node_modules src/main.ts",
     "start:build": "npm i && npm run build:prod",
     "start:prod": "node build/main.js",
-    "build:functions": "npm run build:prod && cp -R ./node_modules ./build && cp package.json ./build"
+    "build": "tsc"
 
   },
   "keywords": [],
